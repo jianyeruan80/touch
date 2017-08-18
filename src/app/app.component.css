@@ -1,0 +1,48 @@
+.swipe-box {
+    display: block;
+    width: 100%;
+    float: left;
+    margin: 0;
+    transform: .5s ease .1s;
+}
+
+.ctn {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.inner-ctn {
+  margin: 20px;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+
+}
+/* Styles go here */
+body.dragging-mode {
+}
+
+div.sortable {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.sortable div {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 200px;
+  background: #DDD;
+  border: 5px solid #5B99B3;
+}
+
+div.sortable div.dragging {
+  border: 5px solid #851E20;
+}

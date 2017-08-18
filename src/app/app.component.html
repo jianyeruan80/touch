@@ -1,3 +1,54 @@
-<h1>
-  {{title}}
-</h1>
+<!-- <div class="ctn" >
+  <div class="inner-ctn" (swipe)="test($event)">
+    <h4 class="ui header medium center aligned">
+      Swipe Avatars with HammerJS
+      <div class="sub header">(swipe left or right)</div>
+    </h4>
+    <div class="ui card swipe-box" 
+      *ngFor="let avatar of avatars; let idx=index"
+      (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)" 
+      [class.visible]="avatar.visible" [class.hidden]="!avatar.visible">
+      <div class="image">
+        <img [src]="avatar.image" [alt]="avatar.name">
+      </div>
+      <div class="content">
+        <a class="header">{{avatar.name}}</a>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+ -->
+
+ <div class='parent'>
+    <label for='hy'>Move stuff between these two containers. Note how the stuff gets inserted near the mouse pointer?
+        Great stuff.</label>
+    <div class='wrapper'>
+        <div class='container' [dragula]='"first-bag"' [dragulaModel]='clicked'>
+            <div style="line-height:50px;border:solid red 2px" *ngFor="let item of clicked">{{item}}</div>
+          
+            
+        </div>
+
+
+        <div class='container' [dragula]='"first-bag"'>
+            <div  style="line-height:50px;border:solid red 2px">This is the default use case. You only need to specify the containers you want to use</div>
+            <div  style="line-height:50px;border:solid red 2px">More interactive use cases lie ahead</div>
+            <div  style="line-height:50px;border:solid red 2px">Make sure to check out the <a href='https://github.com/bevacqua/dragula#readme'>documentation on
+                GitHub!</a></div>
+        </div>
+    </div>
+
+</div>
+<div>
+      <h2>Sortable</h2>
+      <div appSortable class="sortable" (orderChanged)="orderChanged($event)">
+        <div *ngFor="let index of indices">{{index}}</div>
+      </div>
+      <div>
+        Order = {{order}}
+      </div>
+    </div>
